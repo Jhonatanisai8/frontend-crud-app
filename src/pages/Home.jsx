@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import {
+  CButton,
   CContainer,
   CTable,
   CTableBody,
@@ -23,7 +24,7 @@ const Home = () => {
     setUsers(usuarios.data);
   };
   return (
-    <CContainer className="mt-3">
+    <CContainer className="mt-3 table-responsive">
       <CTable className="border">
         <CTableHead>
           <CTableRow>
@@ -32,6 +33,7 @@ const Home = () => {
             <CTableHeaderCell scope="col">Nombre</CTableHeaderCell>
             <CTableHeaderCell scope="col">Apellido</CTableHeaderCell>
             <CTableHeaderCell scope="col">Email</CTableHeaderCell>
+            <CTableHeaderCell scope="col">Acciones</CTableHeaderCell>
           </CTableRow>
         </CTableHead>
         <CTableBody>
@@ -42,6 +44,17 @@ const Home = () => {
               <CTableDataCell>{user.nombre}</CTableDataCell>
               <CTableDataCell>{user.apellido}</CTableDataCell>
               <CTableDataCell>{user.correoElectronico}</CTableDataCell>
+              <CTableDataCell className="text-center">
+                <CButton className="me-2" color="primary" size="sm">
+                  Ver
+                </CButton>
+                <CButton className="me-2" color="secondary" size="sm">
+                  Editar
+                </CButton>
+                <CButton className="me-2" color="danger" size="sm">
+                  Eliminar
+                </CButton>
+              </CTableDataCell>
             </CTableRow>
           ))}
         </CTableBody>
