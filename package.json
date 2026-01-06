@@ -12,6 +12,7 @@
   "dependencies": {
     "@coreui/coreui": "^5.5.0",
     "@coreui/react": "^5.9.2",
+    "axios": "^1.13.2",
     "bootstrap": "^5.3.8",
     "react": "^19.2.0",
     "react-dom": "^19.2.0"
