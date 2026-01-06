@@ -12,31 +12,14 @@ import {
   CFormInput,
   CNavbar,
   CNavbarBrand,
-  CNavbarNav,
-  CNavbarToggler,
-  CNavItem,
-  CNavLink,
 } from "@coreui/react";
 
 export const Navbar = () => {
-  const [visible, setVisible] = useState(false);
   return (
-    <CNavbar expand="lg" className="bg-body-tertiary">
+    <CNavbar expand="lg" color="primary" colorScheme="dark">
       <CContainer fluid>
-        <CNavbarBrand href="#">Navbar</CNavbarBrand>
-        <CNavbarToggler onClick={() => setVisible(!visible)} />
-        <CCollapse className="navbar-collapse" visible={visible}>
-          <CNavbarNav className="me-auto">
-            <CNavItem>
-              <CNavLink href="#" active>
-                Home
-              </CNavLink>
-            </CNavItem>
-            <CNavItem>
-              <CNavLink href="#">Link</CNavLink>
-            </CNavItem>
-          </CNavbarNav>
-        </CCollapse>
+        <CNavbarBrand href="#">Mi Aplicacion Full Stack</CNavbarBrand>
+        <CButton color="light">Agregar Usuario</CButton>
       </CContainer>
     </CNavbar>
   );
