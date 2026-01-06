@@ -11,8 +11,8 @@ import {
 
 const Home = () => {
   return (
-    <CContainer>
-      <CTable>
+    <CContainer className="mt-3">
+      <CTable className="border">
         <CTableHead>
           <CTableRow>
             <CTableHeaderCell scope="col">N°</CTableHeaderCell>
